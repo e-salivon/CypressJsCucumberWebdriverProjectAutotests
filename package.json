@@ -1,0 +1,23 @@
+{
+  "name": "webdriverunivercity",
+  "version": "1.0.0",
+  "description": "cypress cucumber automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
+    "cypress": "^12.14.0",
+    "cypress-xpath": "^2.0.1",
+    "ts-loader": "^9.5.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.6"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/*.js"
+  }
+}
