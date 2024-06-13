@@ -4,20 +4,28 @@
   "description": "cypress cucumber automation framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-all-tests-with-cucumber-html-reports": "npx cypress run && node cucumber-html-report.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
     "cypress": "^12.14.0",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
     "cypress-xpath": "^2.0.1",
     "ts-loader": "^9.5.1"
   },
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.6"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
+    "multiple-cucumber-html-reporter": "^3.6.2"
   },
   "cypress-cucumber-preprocessor": {
-    "stepDefinitions": "cypress/support/step_definitions/*.js"
+    "stepDefinitions": "cypress/support/step_definitions/*.js",
+    "json": {
+      "enabled": true,
+      "formatter": "cucumber-json-formatter",
+      "output": "cypress/reports/cucumber-json/cucumber-report.json"
+    }
   }
 }
