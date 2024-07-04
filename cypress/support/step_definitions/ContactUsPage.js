@@ -1,15 +1,5 @@
 const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
 
-Given("I navigate to WebDriverUniversity page", () =>{
-    cy.visit('https://www.webdriveruniversity.com/')
-});
-
-Given("I click on Contact Us button", () =>{
-    //remove target = blank before clicking the button will open the 'contact us' form in the same windiw
-    //as far as cypress can not work with multiple windows
-    cy.contains("CONTACT US").invoke("removeAttr", "target").click()
-});
-
 When("I type {string} in the First Name field", (firstName) =>{
    if (firstName) {
       cy.get('[name="first_name"]').type(firstName);

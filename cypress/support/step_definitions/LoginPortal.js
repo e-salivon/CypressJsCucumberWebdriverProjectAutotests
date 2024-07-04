@@ -5,10 +5,6 @@ const {
 } = require("@badeball/cypress-cucumber-preprocessor");
 let stub;
 
-Given("I click on LOGIN PORTAL button", () => {
-  cy.contains("LOGIN PORTAL").invoke("removeAttr", "target").click();
-});
-
 When("I type {string} in the Username fild", (userName) => {
   if (userName) {
     cy.get("#text").type(userName);

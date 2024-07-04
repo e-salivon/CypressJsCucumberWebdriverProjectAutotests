@@ -1,7 +1,7 @@
 
 @smoke
 Feature: Login form validation
-    Scenario Outline: Login form positiv and negative scenario
+    Scenario Outline: Login form positive and negative scenario
         Given I navigate to WebDriverUniversity page
         And I click on LOGIN PORTAL button
         When I type "<username>" in the Username fild

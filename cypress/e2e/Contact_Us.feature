@@ -13,5 +13,4 @@ Feature: WebDriverUniversity - Contact Us Page
             | firstName | lastName | email                 | comment                              | messageText                    |
             | Harry     | Potter   | harryPotter@gmail.com | 123 Allachamora!                     | Thank You for your Message!    |
             | Ron       | Weasley  | RonW@gmail            | Can I rent a flying car?             | Error: Invalid email address   |
-            |           | Riddle   | RonW@gmail.com        | You mast deliver cookies in Azkaban! | Error: all fields are required |
-            
+            |           | Riddle   | YouKnowWho@gmail.com  | You mast deliver cookies in Azkaban! | Error: all fields are required |
