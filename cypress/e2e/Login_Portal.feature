@@ -3,7 +3,7 @@
 Feature: Login form validation
     Scenario Outline: Login form positive and negative scenario
         Given I navigate to WebDriverUniversity page
-        And I click on LOGIN PORTAL button
+        And I click on "LOGIN PORTAL" button to open new page
         When I type "<username>" in the Username fild
         And I type "<password>" in the pasword field
         And I click Login button

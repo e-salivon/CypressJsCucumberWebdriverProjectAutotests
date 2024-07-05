@@ -27,3 +27,8 @@ Cypress.Commands.add('clickToOpenPageAtTheSameTab', (selector) => {
     cy.contains(selector).invoke("removeAttr", "target").click()
 
  });
+
+ Cypress.Commands.add('clickToButton', (selector) => {
+   //  cy.get(selector).click()
+   cy.contains(selector).click()
+ });
