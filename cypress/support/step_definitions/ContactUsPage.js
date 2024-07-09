@@ -1,28 +1,22 @@
 const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
+import ContactUs_PO from "./page-objects/ContactUs_PO";
+
+const contactUs = new ContactUs_PO;
 
 When("I type {string} in the First Name field", (firstName) =>{
-   if (firstName) {
-      cy.get('[name="first_name"]').type(firstName);
-  }
+   contactUs.typeFirstName(firstName)
 });
 
  When("I type {string} in the Last Name field", (lastName) =>{
-    if (lastName) {
-      cy.get('[name="last_name"]').type(lastName);
-  }
-
+  contactUs.typeLastName(lastName)
  });
 
  When("I type {string} in the Email field", (email) =>{
-    if (email) {
-      cy.get('[name="email"]').type(email);
-  }
+    contactUs.typeEmail(email)
  });
 
  When("I type {string} in the Comments field", (comment) =>{
-    if (comment) {
-      cy.get('textarea.feedback-input').type(comment);
-  }
+    contactUs.typeComment(comment)
  });
 
  When("I click {string} button", (buttonName) =>{

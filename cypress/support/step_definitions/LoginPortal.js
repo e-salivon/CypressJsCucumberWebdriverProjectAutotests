@@ -1,20 +1,19 @@
-const {
-  When,
-  Given,
-  Then,
-} = require("@badeball/cypress-cucumber-preprocessor");
+const {When, Given, Then} = require("@badeball/cypress-cucumber-preprocessor");
 let stub;
+import LoginPage_PO from "./page-objects/LoginPage-PO";
+const loginPage = new LoginPage_PO;
+
+Given("I navigate to Login Page", () =>{
+ loginPage.navigateToLoginPage();
+});
 
 When("I type {string} in the Username fild", (userName) => {
-  if (userName) {
-    cy.get("#text").type(userName);
-  }
+  loginPage.typeUserName(userName);
+
 });
 
 When("I type {string} in the pasword field", (password) => {
-  if (password) {
-    cy.get("#password").type(password);
-  }
+  loginPage.typePassword(password)
 });
 
 When("I click Login button", () => {
