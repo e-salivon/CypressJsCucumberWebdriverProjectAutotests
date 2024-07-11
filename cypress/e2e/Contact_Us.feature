@@ -1,8 +1,7 @@
 Feature: WebDriverUniversity - Contact Us Page
 
     Scenario Outline: Validate Contact Us form
-        Given I navigate to WebDriverUniversity page
-        And I click on "Contact Us" button to open new page
+        Given I navigate to Contact Us page
         When I type "<firstName>" in the First Name field
         And I type "<lastName>" in the Last Name field
         And I type "<email>" in the Email field

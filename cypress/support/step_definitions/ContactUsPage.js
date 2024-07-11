@@ -3,6 +3,10 @@ import ContactUs_PO from "./page-objects/ContactUs_PO";
 
 const contactUs = new ContactUs_PO;
 
+Given("I navigate to Contact Us page", () =>{
+   contactUs.navigateToContactUsPage()
+});
+
 When("I type {string} in the First Name field", (firstName) =>{
    contactUs.typeFirstName(firstName)
 });
